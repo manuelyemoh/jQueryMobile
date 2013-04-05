@@ -3,8 +3,9 @@
 <head>
    <meta charset="utf-8">
    <title>phoneGapTest</title>
-   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
 </head>
 <body>
   <div id="homePage">
@@ -15,7 +16,7 @@
   		</div>
   	</div>
   	<div class="middleContent">
-  		 	    <div id="blog">
+  		 	    <div data-role="page" id="blog">
   		 	    		<section>
   		 	    				<div class="scrollable" id="scrollMe">
   		 	    					<div id="topSectionB">
@@ -53,7 +54,7 @@
   		 	    				</div>
   		 	    		</section>
   		 	    </div>
-	           <!-- <div id="lineUp" class"touch">
+	           <div data-role="page" id="lineUp" >
 					<section>
   		 	    		<div class="scrollable" id="scrollMe">
   		 	    			<div id="lineUpcontent">
@@ -80,26 +81,26 @@
 						</div>
 						</section>        	
 	            	
-	            </div>-->
-	            <div id="page1">
+	            </div>
+	            <div data-role="page" id="page1">
 	            	<p>
 	            		Blog News
 	            	</p>            
 	            </div>
 	            
-	            <div id="page2">
+	            <div data-role="page" id="page2">
 	            	<p>
 	            		Twitter @ glug
 	            	</p>             
 	            </div>
 	            
-	            <div id="page3">
+	            <div data-role="page" id="page3">
 	            	<p>
 	            		Video Archive 
 	            	</p>             
 	            </div>
 	            
-	            <div id="page4">
+	            <div data-role="page" id="page4">
 	            	<p>
 	            		Buy tickets
 	            	</p>            
@@ -109,7 +110,7 @@
   	<div class="bottomNavi">
   		<ul>
   			
-  			<a href="#page1">
+	<a href="#page1">
   				<li id="tab0" class="tabOver" data-transition="slide">
   					<p>Blog<br/>News</p>
   		 		</li>
@@ -138,11 +139,8 @@
   </div>
 
    <!--<script src="phonegap.js"></script>-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-   <script src="assets/js/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
-   <script src="assets/js/touchscroll.js" type="text/javascript" charset="UTF-8"></script>
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+   <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+   <script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
    <script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

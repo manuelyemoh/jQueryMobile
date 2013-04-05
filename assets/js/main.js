@@ -28,19 +28,6 @@ $(document).ready(function() {
 		alert("not here");
 	}*/
 	
-	$('#bottomSectionB').click(function(){
-		
-		//setTimeout(refreshPage, 700);
-		
-
-	});
-	
-	$('.backButton').click(function(){
-		
-		setTimeout(refreshPage, 500);
-		
-	});
-	
 	function initLineUp(){
 		
 		var imageURL = "http://www.naturalappbility.com/admin/images/"+myArray[0];
