@@ -287,7 +287,7 @@ section{
 
 #page2{
 	
-	background-color:#dddddd;
+	background-color:#ffffff;
 	
 }
 
@@ -527,10 +527,20 @@ section{
 	
 }
 
-#jqt{
+/*
+ * Twitter stuff
+ */
 
-	background-image:none!important;
-	border:none!important;
-	overflow-x: hidden !important;
+#twitterWidget{
+	
+	margin-left:50%;
 	
 }
+
+#twitterWidget section{
+	
+	margin-left: -165px;
+    position: relative;
+    top: 60px;
+}
+

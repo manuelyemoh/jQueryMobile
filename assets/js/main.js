@@ -4,30 +4,7 @@ $(document).ready(function() {
 	var paragraph;
 	
 	var myArray = [];
-	 
-	
-	function refreshPage(){
-		
-		myArray = [];
-		document.location = "index.html";
 
-	}
-	
-	//var testUrl = $(location).attr('href');
-	
-	//if (/lineUp/i.test(testUrl)){
-		
-		
-	//}
-	/*if ($(location).attr('href') === 'http://localhost:8888/phoneGap/index.html#lineUp')
-	{
-     alert("here");
-	}
-	else{
-		
-		alert("not here");
-	}*/
-	
 	function initLineUp(){
 		
 		var imageURL = "http://www.naturalappbility.com/admin/images/"+myArray[0];
