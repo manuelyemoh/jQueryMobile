@@ -46,7 +46,27 @@ $(document).ready(function() {
 	});
 	}
 	
+	function myCall2() {
+		
+		var url =  "http://vimeo.com/api/v2/glug/info.json";
+		
+    	$.getJSON(url + "?callback=?", null, function(data) {
+			
+			var items = [];
+			
+			$.each(data, function(key, val) {
+				
+    			items.push( key + val );
+    			//alert(items);
+ 			});
+				
+           });
+        }
+	  
+		
+
 	setTimeout(myCall, 100);
+	setTimeout(myCall2, 100);
 
 	$(".tabOver").mouseover(function(){
 		
