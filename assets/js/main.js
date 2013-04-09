@@ -4,6 +4,8 @@ $(document).ready(function() {
 	var paragraph;
 	
 	var myArray = [];
+	var items = [];
+	var classArray = "Varray";
 
 	function initLineUp(){
 		
@@ -48,22 +50,52 @@ $(document).ready(function() {
 	
 	function myCall2() {
 		
-		var url =  "http://vimeo.com/api/v2/glug/info.json";
+		var url =  "http://vimeo.com/api/v2/glug/videos.json";
 		
     	$.getJSON(url + "?callback=?", null, function(data) {
 			
-			var items = [];
+			
 			
 			$.each(data, function(key, val) {
 				
-    			items.push( key + val );
-    			//alert(items);
+				items.push(val);
+				//alert(items);
+				//alert( key + ": " + val );
  			});
+ 			setTimeout(handleData, 500);
 				
            });
-        }
-	  
-		
+           
+           
+           
+     }
+     
+     function handleData(){
+     	
+     	for(var i = 0; i<=9; i++){
+     	
+     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].title+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].id+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].user_name+'</div>');
+     		$('#vimeoContent div.scrollable').append('<iframe src="'+items[i].url+'"></iframe>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div id="blankSpace"></div>');
+     	}
+     	
+     	//$(".Varray7").html(classArray); 
+     	
+     	/*for(var i = 0; i<=9; i++){
+ 				
+ 				alert(items[i].id);
+ 				alert(items[i].upload_date);
+ 			}*/
+ 			
+     }
+     
+     //<iframe src="http://player.vimeo.com/video/62714874" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 	setTimeout(myCall, 100);
 	setTimeout(myCall2, 100);
