@@ -66,7 +66,7 @@ $(document).ready(function() {
 				
            });
            
-           
+          
            
      }
      
@@ -77,12 +77,13 @@ $(document).ready(function() {
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].title+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].id+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].user_name+'</div>');
-     		$('#vimeoContent div.scrollable').append('<iframe src="'+items[i].url+'"></iframe>');
+     		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div id="blankSpace"></div>');
+     		
      	}
      	
      	//$(".Varray7").html(classArray); 
@@ -120,7 +121,6 @@ $(document).ready(function() {
 		if(tabObj == tab0){
 			
 			$(tabObj).css('background-color', '#212121');
-
 			
 		}
 		if(tabObj == tab1){
