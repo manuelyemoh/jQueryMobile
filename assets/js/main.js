@@ -73,11 +73,10 @@ $(document).ready(function() {
      function handleData(){
      	
      	for(var i = 0; i<=9; i++){
-     	
+     		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].title+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].id+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].user_name+'</div>');
-     		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
