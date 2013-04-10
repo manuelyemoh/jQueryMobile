@@ -114,6 +114,7 @@ section{
     position: relative;
     top: 50px;
     width: 330px;
+    -webkit-overflow-scrolling: touch;
     
 }
 
@@ -175,7 +176,7 @@ section{
 	height: 186px;
     padding-left: 19px;
     position: relative;
-    width: 100%;
+    width: 90%;
 	
 }
 
@@ -281,7 +282,7 @@ section{
 
 #page1{
 
-	background-color:#cccccc;
+	background-color:#ffffff;
 	
 }
 
@@ -353,6 +354,7 @@ section{
 	position: relative;
 	top: 50px;
 	width: 330px;
+	-webkit-overflow-scrolling: touch;
 
 }
 
@@ -430,14 +432,14 @@ section{
 #lineUp h2{
 	
 	color: #000000;
-	font-family: Helvetica;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0px;
-	width: 330px;
-	position: relative;
-	top: 7px;
-	left: 34px;
+    font-family: Helvetica;
+    font-size: 13px;
+    font-weight: normal;
+    left: 34px;
+    margin: 0;
+    position: relative;
+    top: 7px;
+    width: 280px;
 	
 }
 
@@ -460,6 +462,7 @@ section{
 	position: relative;
 	top: 28px;
 	width: 330px;
+	-webkit-overflow-scrolling: touch;
 	
 }
 
