@@ -23,9 +23,7 @@ $(document).ready(function() {
 
 		        $.each(data, function(key, val) {
 				
-				
 				myArray.push(val);
-				
 
  				});
  				setTimeout(handleDataOne, 500);
@@ -82,16 +80,26 @@ $(document).ready(function() {
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+items[i].title+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+items[i].description+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[4]+'">'+items[i].upload_date+'</div>');
-     		//$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[5]+'">'+items[i].upload_date+'</div>');
-     		//$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[6]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');
      		
      	}	
      }
+     
+     function handleBlog(){
+     	
+     		$('#blogContent div.scrollable').append('<div id="blogCell0"></div>');
+     		$('#blogContent #blogCell0').css('background-image', 'url(../assets/images/blogImage0.jpg)');
+     		$('#blogContent div.scrollable').append('<div id="blogCell1"></div>');
+     		$('#blogContent #blogCell1').css('background-image', 'url(../assets/images/blogImage1.jpg)');
+     		$('#blogContent div.scrollable').append('<div id="blogCell2">Hello Gluggers,</br></br>We are super excited to announce our 9th Glug on the 9th November. We have a great line up and are focusing on theladies for this event with all female artists and speakers!</div>');
+     		$('#blogContent div.scrollable').append('<div id="blogCell3">5 days</div>');
+     								
+     }
 
 	setTimeout(myCall, 100);
 	setTimeout(myCall2, 100);
-
+	setTimeout(handleBlog, 200);
+	
 	$(".tabOver").mouseover(function(){
 		
 		var currentId = $(this).attr('id');
@@ -133,5 +141,3 @@ $(document).ready(function() {
 	});
 
 });
-
-	
