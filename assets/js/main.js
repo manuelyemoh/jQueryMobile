@@ -5,22 +5,9 @@ $(document).ready(function() {
 	
 	var myArray = [];
 	var items = [];
-	var classArray = "Varray";
-
-	function initLineUp(){
-		
-		var imageURL = "http://www.naturalappbility.com/admin/images/"+myArray[0];
-		//alert(myArray[0]);
-		//alert(myArray);
-		$(".array1").css({'background-image': 'url(' + imageURL + ')', });
-		$(".array2").html(myArray[1]);
-		$(".array3").html(myArray[2]);
-		$(".array4").html(myArray[3]);
-		$(".array5").html(myArray[4]);
-		$(".array6").html(myArray[5]);
-		$("#elementID").html("another string");
-		
-	}
+	var imgLine = "imgLine";
+	var lineUpClass = "array";
+	var vimeoClass = "Varray";
 
 	function myCall() {
 
@@ -33,14 +20,16 @@ $(document).ready(function() {
 	    cache: false,
 	    success: function(data)
 		    {
-		    	
-		        myArray.push(data[0]);
-		        myArray.push(data[1]);
-		        myArray.push(data[2]);
-		        myArray.push(data[3]);
-		        myArray.push(data[4]);
-		        myArray.push(data[5]);
-		        setTimeout(initLineUp, 100);
+
+		        $.each(data, function(key, val) {
+				
+				
+				myArray.push(val);
+				
+
+ 				});
+ 				setTimeout(handleDataOne, 500);
+		       
 		    },
     	error: function(XMLHttpRequest, textStatus, errorThrown) {
     		 alert("errorThrown-->"+errorThrown);
@@ -54,7 +43,7 @@ $(document).ready(function() {
 		
     	$.getJSON(url + "?callback=?", null, function(data) {
 			
-			
+			//alert(data);
 			
 			$.each(data, function(key, val) {
 				
@@ -62,40 +51,43 @@ $(document).ready(function() {
 				//alert(items);
 				//alert( key + ": " + val );
  			});
- 			setTimeout(handleData, 500);
+ 			setTimeout(handleDataTwo, 500);
 				
-           });
-           
-          
-           
+          });
      }
      
-     function handleData(){
+     function handleDataOne(){
+     	
+     	for(var a = 0; a < myArray.length; a++){
+			
+			$('#lineUpcontent').append('<div class="'+imgLine+[a]+'"></div>');
+			$('#lineUpcontent .'+imgLine+[a]).css('background-image', 'url(http://www.naturalappbility.com/admin/images/'+myArray[a].fileName+')');
+			$('#lineUpcontent .'+imgLine+[a]).css('height', '180px');
+			$('#lineUpcontent .'+imgLine+[a]).css('width', '300px');
+			$('#lineUpcontent .'+imgLine+[a]).css('margin', '14px 0px 0px 0px');
+			$('#lineUpcontent .'+imgLine+[a]).css('position', 'relative');
+			$('#lineUpcontent .'+imgLine+[a]).css('z-index', '10');
+			$('#lineUpcontent ').append('<h1 class="'+lineUpClass+[1]+'">'+myArray[a].postTitle+'</h1>');
+			$('#lineUpcontent ').append('<p class="'+lineUpClass+[2]+'">'+myArray[a].postDetail+'</p>');
+			$('#lineUpcontent ').append('<div id="socialMedia"><div id="twitter"><a class="array3">'+myArray[a].twitter+'</a></div><div id="linkedIn"><a class="array4">'+myArray[a].linkedIn+'</a></div><div id="website"><a class="array4">'+myArray[a].webLink+'</a></div></div>');
+			$('#lineUpcontent ').append('<div id="blankSpaceLineUp"></div>');
+     		
+     	}
+     }
+     
+     function handleDataTwo(){
      	
      	for(var i = 0; i<=9; i++){
      		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].title+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].id+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].user_name+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+classArray+[i]+'">'+items[i].upload_date+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div id="blankSpace"></div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+items[i].title+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+items[i].description+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[4]+'">'+items[i].upload_date+'</div>');
+     		//$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[5]+'">'+items[i].upload_date+'</div>');
+     		//$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[6]+'">'+items[i].upload_date+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');
      		
-     	}
-     	
-     	//$(".Varray7").html(classArray); 
-     	
-     	/*for(var i = 0; i<=9; i++){
- 				
- 				alert(items[i].id);
- 				alert(items[i].upload_date);
- 			}*/
- 			
+     	}	
      }
-     
-     //<iframe src="http://player.vimeo.com/video/62714874" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 	setTimeout(myCall, 100);
 	setTimeout(myCall2, 100);

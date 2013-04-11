@@ -268,6 +268,18 @@ section{
 	
 }
 
+#blankSpaceVimeo{
+	
+	height:50px;
+	
+}
+
+#blankSpaceLineUp{
+	
+	height:40px;
+	
+}
+
 #blog{
 	
 	background-color:#ffffff;
@@ -364,9 +376,9 @@ section{
 	z-index:10;
 }
 
-#lineUp #lineUpcontent #image0{
+#lineUp #lineUpcontent .array0{
 	
-	background-image:url:("../");
+	background-image:url("../");
 	height: 180px;
 	width: 300px;
 	position: relative;
@@ -399,7 +411,7 @@ section{
 	width: 100%;
 	height: 100px;
 	margin-left: -7px;
-	
+
 }
 
 #lineUp #lineUpcontent #twitter{
@@ -409,7 +421,8 @@ section{
 	width: 27px;
 	position:relative;
 	margin: 10px 1px 2px 4px;
-	
+	text-decoration: underline;
+	cursor:pointer;
 }
 
 #lineUp #lineUpcontent #linkedIn{
@@ -418,7 +431,8 @@ section{
 	height: 30px;
 	width: 27px;
 	margin: 2px 0px 0px 4px;
-	
+	text-decoration: underline;
+	cursor:pointer;
 }
 
 #lineUp #lineUpcontent #website{
@@ -427,9 +441,11 @@ section{
 	height: 30px;
 	width: 27px;
 	margin: 2px 0px 0px 4px;
+	text-decoration: underline;
+	cursor:pointer;
 }
 
-#lineUp h2{
+#lineUp a{
 	
 	color: #000000;
     font-family: Helvetica;
@@ -439,7 +455,6 @@ section{
     margin: 0;
     position: relative;
     top: 7px;
-    width: 280px;
 	
 }
 
@@ -466,12 +481,20 @@ section{
 	
 }
 
-#vimeoContent .Varray1{
+#vimeoContent .Varray0{
 	
 	font-size: 14px;
 	font-weight: bold!important;
 	margin-top: 21px;
+	color:#ff6600;
+}
+
+#vimeoContent .Varray1{
 	
+	font-size: 12px;
+	font-weight: bold!important;
+	margin-top: 15px;
+	width: 95%;
 }
 
 #vimeoContent .Varray2{
@@ -490,9 +513,9 @@ section{
 
 #vimeoContent .Varray4{
 	
+	color:#ff6600;	
 	font-size: 10px;
-	margin-top: 3px;
-	
+	margin-top:15px;
 }
 
 #vimeoContent .Varray5{
