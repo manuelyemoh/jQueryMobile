@@ -93,7 +93,7 @@ $(document).ready(function() {
      		$('#blogContent #blogCell1').css('background-image', 'url(http://www.naturalappbility.com/admin/images/blogImage1.jpg)');
      		$('#blogContent div.scrollable').append('<div id="blogCell2">Hello Gluggers,</br></br>We are super excited to announce our 9th Glug on the 9th November. We have a great line up and are focusing on theladies for this event with all female artists and speakers!</div>');
      		$('#blogContent div.scrollable').append('<div id="blogCell3">5 days</div>');
-     		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');				
+     		$('#blogContent div.scrollable').append('<div id="blankSpaceBlog"></div>');				
      		
      }
 
