@@ -88,12 +88,13 @@ $(document).ready(function() {
      function handleBlog(){
      	
      		$('#blogContent div.scrollable').append('<div id="blogCell0"></div>');
-     		$('#blogContent #blogCell0').css('background-image', 'url(../assets/images/blogImage0.jpg)');
+     		$('#blogContent #blogCell0').css('background-image', 'url(http://www.naturalappbility.com/admin/images/blogImage0.jpg)');
      		$('#blogContent div.scrollable').append('<div id="blogCell1"></div>');
-     		$('#blogContent #blogCell1').css('background-image', 'url(../assets/images/blogImage1.jpg)');
+     		$('#blogContent #blogCell1').css('background-image', 'url(http://www.naturalappbility.com/admin/images/blogImage1.jpg)');
      		$('#blogContent div.scrollable').append('<div id="blogCell2">Hello Gluggers,</br></br>We are super excited to announce our 9th Glug on the 9th November. We have a great line up and are focusing on theladies for this event with all female artists and speakers!</div>');
      		$('#blogContent div.scrollable').append('<div id="blogCell3">5 days</div>');
-     								
+     		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');				
+     		
      }
 
 	setTimeout(myCall, 100);
