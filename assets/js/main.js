@@ -79,7 +79,7 @@ $(document).ready(function() {
      		
      		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+items[i].title+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+items[i].description+'</div>');
+     		$('#vime0oContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+items[i].description+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[4]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');
 
@@ -91,7 +91,8 @@ $(document).ready(function() {
      }
      
      function handleBlog(){
-     	
+     		$("p").html("This frame uses the W3C box model: <span>" +
+            jQuery.support.boxModel + "</span>");
      		$('#blogContent div.scrollable').append('<div id="blogCell0"></div>');
      		$('#blogContent #blogCell0').css('background-image', 'url(http://www.naturalappbility.com/admin/images/blogImage0.jpg)');
      		$('#blogContent div.scrollable').append('<div id="blogCell1"></div>');
