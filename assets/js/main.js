@@ -97,9 +97,34 @@ $(document).ready(function() {
      		
      }
 
-	setTimeout(myCall, 100);
-	setTimeout(myCall2, 100);
-	setTimeout(handleBlog, 200);
+	//setTimeout(myCall, 100);
+	//setTimeout(myCall2, 100);
+	//setTimeout(handleBlog, 200);
+	
+	$(".tabOver").click(function(){
+		
+		var currentId = $(this).attr('id');
+		//alert(currentId);
+		//alert(tab0);
+		var tabObj = eval("(" + currentId + ")");
+		
+		if(tabObj == tab0){
+			
+			handleBlog();
+			
+			
+		}
+		if(tabObj == tab1){
+			
+			
+		}
+
+		if(tabObj == tab3){
+			
+			
+		}
+		
+	});
 	
 	$(".tabOver").mouseover(function(){
 		
