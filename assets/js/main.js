@@ -86,7 +86,7 @@ $(document).ready(function() {
      	}	
      	if(i == 10){
      			
-     			alert("hi");
+     		
        	}
      }
      
