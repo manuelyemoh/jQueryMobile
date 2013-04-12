@@ -1,3 +1,9 @@
+$(document).bind("mobileinit", function(){
+    
+    $.mobile.allowCrossDomainPages = true;
+    
+});
+
 $(document).ready(function() {
 	
 	var currentId;
@@ -9,7 +15,6 @@ $(document).ready(function() {
 	var lineUpClass = "array";
 	var vimeoClass = "Varray";
 
-    $.mobile.allowCrossDomainPages = true;
 	
 	function myCall() {
 
@@ -86,10 +91,7 @@ $(document).ready(function() {
      		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');
 
      	}	
-     	if(i == 10){
-     			
-     		
-       	}
+     	
      }
      
      function handleBlog(){
@@ -103,15 +105,14 @@ $(document).ready(function() {
      		$('#blogContent div.scrollable').append('<div id="blankSpaceBlog"></div>');				
      		
      }
-
+     
 	//setTimeout(myCall, 100);
 	//setTimeout(myCall2, 100);
 	//setTimeout(handleBlog, 200);
 	
 	$("#bottomSectionB").click(function(){
 		
-		setTimeout(myCall, 100);
-		
+		alert("hit");
 	});
 	
 	$("#tab0").click(function(){
