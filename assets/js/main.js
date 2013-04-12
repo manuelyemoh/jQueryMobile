@@ -9,6 +9,8 @@ $(document).ready(function() {
 	var lineUpClass = "array";
 	var vimeoClass = "Varray";
 
+    $.mobile.allowCrossDomainPages = true;
+	
 	function myCall() {
 
     $.ajax
@@ -91,8 +93,7 @@ $(document).ready(function() {
      }
      
      function handleBlog(){
-     		$("p").html("This frame uses the W3C box model: <span>" +
-            jQuery.support.boxModel + "</span>");
+     	
      		$('#blogContent div.scrollable').append('<div id="blogCell0"></div>');
      		$('#blogContent #blogCell0').css('background-image', 'url(http://www.naturalappbility.com/admin/images/blogImage0.jpg)');
      		$('#blogContent div.scrollable').append('<div id="blogCell1"></div>');
