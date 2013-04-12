@@ -76,13 +76,18 @@ $(document).ready(function() {
      function handleDataTwo(){
      	
      	for(var i = 0; i<=9; i++){
+     		
      		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+items[i].title+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+items[i].description+'</div>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[4]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');
-     		
+
      	}	
+     	if(i == 10){
+     			
+     			alert("hi");
+       	}
      }
      
      function handleBlog(){
@@ -101,28 +106,21 @@ $(document).ready(function() {
 	//setTimeout(myCall2, 100);
 	//setTimeout(handleBlog, 200);
 	
-	$(".tabOver").click(function(){
+	$("#bottomSectionB").click(function(){
 		
-		var currentId = $(this).attr('id');
-		//alert(currentId);
-		//alert(tab0);
-		var tabObj = eval("(" + currentId + ")");
+		setTimeout(myCall, 100);
 		
-		if(tabObj == tab0){
-			
-			handleBlog();
-			
-			
-		}
-		if(tabObj == tab1){
-			
-			
-		}
-
-		if(tabObj == tab3){
-			
-			
-		}
+	});
+	
+	$("#tab0").click(function(){
+		
+		setTimeout(handleBlog, 100);
+		
+	});
+	
+	$("#tab2").click(function(){
+		
+		setTimeout(myCall2, 100);
 		
 	});
 	
