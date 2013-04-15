@@ -117,37 +117,29 @@ $(document).ready(function() {
 	
 	$(".backButton").click(function(){
 		
-		$('.topNavi').css('display', 'none');
-		
+	    
+
 	});
 	
-	$("#bottomSectionB").click(function(){
+	$("#bottomSectionB").click(function(e){
 		
+		e.stopImmediatePropagation();
+	    e.preventDefault();
+	    $.mobile.changePage("#lineUp");
 		setTimeout(myCall, 100);
-		$('.topNavi').css('display', 'inline');
-		
+
 	});
 	
 	$("#tab0").click(function(){
 		
 		setTimeout(handleBlog, 100);
-		$('.topNavi').css('display', 'inline');
-	});
-	
-	$("#tab1").click(function(){
 		
-		$('.topNavi').css('display', 'inline');
 	});
-	
+
 	$("#tab2").click(function(){
 		
 		setTimeout(myCall2, 100);
-		$('.topNavi').css('display', 'inline');
-	});
-	
-	$("#tab3").click(function(){
-
-		$('.topNavi').css('display', 'inline');
+		
 	});
 	
 	$(".tabOver").mouseover(function(){
@@ -191,3 +183,12 @@ $(document).ready(function() {
 	});
 
 });
+
+( function( $, undefined ) {
+
+$( document ).bind( "mobileinit", function() {
+	$.mobile.pushStateEnabled = false;
+});
+
+})( jQuery );
+

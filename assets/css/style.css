@@ -46,7 +46,7 @@ p{
 	top: 0px;
 	left: 0px;
 	z-index:11;
-	display:none;
+
 }
 
 .topNavi .backButton{
@@ -111,10 +111,11 @@ section{
 	
     height: 400px;
     margin: 0 0 0 -165px;
+    overflow: auto;
     position: relative;
-    top: 10px;
+    top: 50px;
     width: 330px;
-    overflow:auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 #scrollMe #topSectionB{
