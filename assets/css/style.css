@@ -111,11 +111,9 @@ section{
 	
     height: 400px;
     margin: 0 0 0 -165px;
-    overflow: auto;
     position: relative;
-    top: 0;
+    top: 10px;
     width: 330px;
-    -webkit-overflow-scrolling: touch;
     
 }
 
