@@ -87,7 +87,7 @@ $(document).ready(function() {
      
      function handleDataTwo(){
      	
-     	for(var i = 0; i<=9; i++){
+     	for(var i = 0; i<=4; i++){
      		
      		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+items[i].title+'</div>');
@@ -115,9 +115,11 @@ $(document).ready(function() {
 	//setTimeout(myCall2, 100);
 	//setTimeout(handleBlog, 200);
 	
-	$(".backButton").click(function(){
+	$(".backButton").click(function(e){
 		
-	    
+	    e.stopImmediatePropagation();
+	    e.preventDefault();
+	    $.mobile.changePage("#blog");
 
 	});
 	
@@ -126,20 +128,41 @@ $(document).ready(function() {
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#lineUp");
-		setTimeout(myCall, 100);
+		setTimeout(myCall, 500);
 
 	});
 	
-	$("#tab0").click(function(){
+	$("#tab0").click(function(e){
 		
-		setTimeout(handleBlog, 100);
+		setTimeout(handleBlog, 500);
+		e.stopImmediatePropagation();
+	    e.preventDefault();
+	    $.mobile.changePage("#page1");
+		
+	});
+	
+	$("#tab1").click(function(e){
+		
+		e.stopImmediatePropagation();
+	    e.preventDefault();
+	    $.mobile.changePage("#page2");
 		
 	});
 
-	$("#tab2").click(function(){
+	$("#tab2").click(function(e){
 		
-		setTimeout(myCall2, 100);
+		setTimeout(myCall2, 500);
+		e.stopImmediatePropagation();
+	    e.preventDefault();
+	    $.mobile.changePage("#page3");
+	});
+	
+	$("#tab3").click(function(e){
 		
+		setTimeout(handleBlog, 500);
+		e.stopImmediatePropagation();
+	    e.preventDefault();
+	    $.mobile.changePage("#page4");
 	});
 	
 	$(".tabOver").mouseover(function(){
