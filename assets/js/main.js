@@ -95,7 +95,7 @@ $(document).ready(function() {
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[4]+'">'+items[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');
 
-     	}	
+     	}
      	
      }
      
@@ -128,7 +128,7 @@ $(document).ready(function() {
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#lineUp");
-		setTimeout(myCall, 500);
+		//setTimeout(myCall, 500);
 
 	});
 	

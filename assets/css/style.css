@@ -556,7 +556,7 @@ section{
 	position: relative;
 	top: 28px;
 	width: 330px;
-
+	-webkit-overflow-scrolling: touch;
 	
 }
 

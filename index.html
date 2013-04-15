@@ -61,6 +61,7 @@
 					<section>
   		 	    		<div class="scrollable" id="scrollMe">
   		 	    			<div id="lineUpcontent">
+  		 	    				
 							</div>
 							<div id="blankSpace"></div>	
 						</div>
@@ -139,7 +140,8 @@
   		 $(document).one('mobileinit', function () {
  
              $.mobile.allowCrossDomainPages = true;
-             $.mobile.defaultPageTransition = 'slide';
+             $.mobile.defaultPageTransition = 'fade';
+             $.mobile.buttonMarkup.hoverDelay = 0;
  
         });
   		
