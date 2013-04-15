@@ -1,9 +1,3 @@
-$(document).bind("mobileinit", function(){
-    
-    $.mobile.allowCrossDomainPages = true;
-    
-});
-
 $(document).ready(function() {
 	
 	var currentId;
@@ -14,6 +8,17 @@ $(document).ready(function() {
 	var imgLine = "imgLine";
 	var lineUpClass = "array";
 	var vimeoClass = "Varray";
+
+	if (navigator.onLine) {
+    	alert("online");
+    	
+	}
+	
+	else{
+		
+		alert("not online");
+		
+	}
 
 	
 	function myCall() {
@@ -112,7 +117,7 @@ $(document).ready(function() {
 	
 	$("#bottomSectionB").click(function(){
 		
-		alert("hit");
+		
 	});
 	
 	$("#tab0").click(function(){

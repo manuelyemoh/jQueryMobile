@@ -382,7 +382,7 @@ section{
     position: relative;
     top: 28px;
     width: 380px;
-    -webkit-overflow-scrolling: touch;
+  
 	
 }
 
@@ -558,7 +558,7 @@ section{
 	position: relative;
 	top: 28px;
 	width: 330px;
-	-webkit-overflow-scrolling: touch;
+
 	
 }
 
@@ -725,4 +725,14 @@ section{
     position: relative;
     top: 60px;
 }
+
+.scrollable {
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+ 
+            /* iOS specific fix, don't use it on Android devices */
+        .scrollable > * {
+            -webkit-transform: translateZ(0px);
+        }
 
