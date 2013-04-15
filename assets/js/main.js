@@ -128,7 +128,7 @@ $(document).ready(function() {
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#lineUp");
-		//setTimeout(myCall, 500);
+		setTimeout(myCall, 500);
 
 	});
 	

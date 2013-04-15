@@ -43,7 +43,7 @@ p{
 	height: 50px;
 	position: absolute;
 	width: 100%;
-	top: 0px;
+	top: -1px;
 	left: 0px;
 	z-index:11;
 
