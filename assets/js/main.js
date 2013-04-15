@@ -10,8 +10,9 @@ $(document).ready(function() {
 	var vimeoClass = "Varray";
 
 	if (navigator.onLine) {
-    	alert("online");
-    	
+		
+		
+    
 	}
 	
 	else{
@@ -19,7 +20,6 @@ $(document).ready(function() {
 		alert("not online");
 		
 	}
-
 	
 	function myCall() {
 
@@ -115,21 +115,39 @@ $(document).ready(function() {
 	//setTimeout(myCall2, 100);
 	//setTimeout(handleBlog, 200);
 	
+	$(".backButton").click(function(){
+		
+		$('.topNavi').css('display', 'none');
+		
+	});
+	
 	$("#bottomSectionB").click(function(){
 		
+		setTimeout(myCall, 100);
+		$('.topNavi').css('display', 'inline');
 		
 	});
 	
 	$("#tab0").click(function(){
 		
 		setTimeout(handleBlog, 100);
+		$('.topNavi').css('display', 'inline');
+	});
+	
+	$("#tab1").click(function(){
 		
+		$('.topNavi').css('display', 'inline');
 	});
 	
 	$("#tab2").click(function(){
 		
 		setTimeout(myCall2, 100);
-		
+		$('.topNavi').css('display', 'inline');
+	});
+	
+	$("#tab3").click(function(){
+
+		$('.topNavi').css('display', 'inline');
 	});
 	
 	$(".tabOver").mouseover(function(){

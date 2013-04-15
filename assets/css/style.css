@@ -46,7 +46,7 @@ p{
 	top: 0px;
 	left: 0px;
 	z-index:11;
-	
+	display:none;
 }
 
 .topNavi .backButton{
@@ -113,7 +113,7 @@ section{
     margin: 0 0 0 -165px;
     overflow: auto;
     position: relative;
-    top: 50px;
+    top: 0;
     width: 330px;
     -webkit-overflow-scrolling: touch;
     
@@ -419,7 +419,6 @@ section{
     z-index: 10;
 	
 }
-
 
 #blogContent #blogCell3{
 	
