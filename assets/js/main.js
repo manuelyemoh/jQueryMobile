@@ -1,16 +1,24 @@
 $(document).ready(function() {
 	
 	var currentId;
-	var paragraph;
 	
 	var myArray = [];
 	var items = [];
 	var twit = [];
 	var imgLine = "imgLine";
-	var lineUpClass = "array";
+
 	var vimeoClass = "Varray";
 	var twitterClass = "Tarray";
-	var externalURL = 'http://'
+	
+	//true false content loaded
+	
+	var lineupLoader = false;
+	var blogLoader = false;
+	var twitterLoader = false;
+	var vimeoLoader = false;
+	var Loader = false;
+	
+	
 	if (navigator.onLine) {
 		
 		
@@ -71,7 +79,11 @@ $(document).ready(function() {
      //Line Up
      function handleDataOne(){
      	
+     	var externalURL = 'http://'
+     	var lineUpClass = "array";
+     	
      	for(var a = 0; a < myArray.length; a++){
+			
 			
 			$('#lineUpcontent').append('<div class="'+imgLine+[a]+'"></div>');
 			$('#lineUpcontent .'+imgLine+[a]).css('background-image', 'url(http://www.naturalappbility.com/admin/images/'+myArray[a].fileName+')');

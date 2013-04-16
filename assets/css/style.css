@@ -381,7 +381,7 @@ section{
     position: relative;
     top: 28px;
     width: 380px;
-  
+    -webkit-overflow-scrolling: touch;
 	
 }
 
@@ -397,7 +397,6 @@ section{
 }
 
 #blogContent #blogCell1{
-	
 	
     height: 108px;
     margin: 33px 0 0 19px;
