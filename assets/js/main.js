@@ -5,10 +5,12 @@ $(document).ready(function() {
 	
 	var myArray = [];
 	var items = [];
+	var twit = [];
 	var imgLine = "imgLine";
 	var lineUpClass = "array";
 	var vimeoClass = "Varray";
-
+	var twitterClass = "Tarray";
+	var externalURL = 'http://'
 	if (navigator.onLine) {
 		
 		
@@ -66,6 +68,7 @@ $(document).ready(function() {
           });
      }
      
+     //Line Up
      function handleDataOne(){
      	
      	for(var a = 0; a < myArray.length; a++){
@@ -79,12 +82,13 @@ $(document).ready(function() {
 			$('#lineUpcontent .'+imgLine+[a]).css('z-index', '10');
 			$('#lineUpcontent ').append('<h1 class="'+lineUpClass+[1]+'">'+myArray[a].postTitle+'</h1>');
 			$('#lineUpcontent ').append('<p class="'+lineUpClass+[2]+'">'+myArray[a].postDetail+'</p>');
-			$('#lineUpcontent ').append('<div id="socialMedia"><div id="twitter"><a class="array3">'+myArray[a].twitter+'</a></div><div id="linkedIn"><a class="array4">'+myArray[a].linkedIn+'</a></div><div id="website"><a class="array4">'+myArray[a].webLink+'</a></div></div>');
+			$('#lineUpcontent ').append('<div id="socialMedia"><div id="twitter"><a href="'+'https://twitter.com/'+myArray[a].twitter+'" class="array3">'+externalURL+myArray[a].twitter+'</a></div><div id="linkedIn"><a href="'+externalURL+myArray[a].linkedIn+'" class="array4">'+myArray[a].linkedIn+'</a></div><div id="website"><a href="'+myArray[a].webLink+'" class="array4">'+myArray[a].webLink+'</a></div></div>');
 			$('#lineUpcontent ').append('<div id="blankSpaceLineUp"></div>');
      		
      	}
      }
      
+     //Vimeo
      function handleDataTwo(){
      	
      	for(var i = 0; i<=4; i++){
@@ -99,6 +103,7 @@ $(document).ready(function() {
      	
      }
      
+     //Blog
      function handleBlog(){
      	
      		$('#blogContent div.scrollable').append('<div id="blogCell0"></div>');

@@ -496,32 +496,34 @@ section{
 #lineUp #lineUpcontent #twitter{
 	
 	background-image: url("../images/spriteLineUpLogos.jpg");
-	height: 30px;
-	width: 27px;
-	position:relative;
-	margin: 10px 1px 2px 4px;
-	text-decoration: underline;
-	cursor:pointer;
+    background-repeat: no-repeat;
+    height: 30px;
+    margin: 10px 1px 2px 4px;
+    position: relative;
+    text-decoration: underline;
+    width: 300px;
 }
 
 #lineUp #lineUpcontent #linkedIn{
 	
 	background: url("../images/spriteLineUpLogos.jpg") 0 -31px;
+	background-repeat:no-repeat;
 	height: 30px;
 	width: 27px;
 	margin: 2px 0px 0px 4px;
 	text-decoration: underline;
-	cursor:pointer;
+	width:300px;
 }
 
 #lineUp #lineUpcontent #website{
 	
 	background: url("../images/spriteLineUpLogos.jpg") 0 -60px;
+	background-repeat:no-repeat;
 	height: 30px;
 	width: 27px;
 	margin: 2px 0px 0px 4px;
 	text-decoration: underline;
-	cursor:pointer;
+	width:300px;
 }
 
 #lineUp a{
