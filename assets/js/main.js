@@ -82,7 +82,7 @@ $(document).ready(function() {
 			$('#lineUpcontent .'+imgLine+[a]).css('z-index', '10');
 			$('#lineUpcontent ').append('<h1 class="'+lineUpClass+[1]+'">'+myArray[a].postTitle+'</h1>');
 			$('#lineUpcontent ').append('<p class="'+lineUpClass+[2]+'">'+myArray[a].postDetail+'</p>');
-			$('#lineUpcontent ').append('<div id="socialMedia"><div id="twitter"><a href="'+'https://twitter.com/'+myArray[a].twitter+'" class="array3">'+externalURL+myArray[a].twitter+'</a></div><div id="linkedIn"><a href="'+externalURL+myArray[a].linkedIn+'" class="array4">'+myArray[a].linkedIn+'</a></div><div id="website"><a href="'+myArray[a].webLink+'" class="array4">'+myArray[a].webLink+'</a></div></div>');
+			$('#lineUpcontent ').append('<div id="socialMedia"><div id="twitter"><a href="'+'https://twitter.com/'+myArray[a].twitter+'" class="array3">'+myArray[a].twitter+'</a></div><div id="linkedIn"><a href="'+externalURL+myArray[a].linkedIn+'" class="array4">'+myArray[a].linkedIn+'</a></div><div id="website"><a href="'+myArray[a].webLink+'" class="array4">'+myArray[a].webLink+'</a></div></div>');
 			$('#lineUpcontent ').append('<div id="blankSpaceLineUp"></div>');
      		
      	}
