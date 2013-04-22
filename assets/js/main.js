@@ -18,25 +18,12 @@ $(document).ready(function() {
 	var vimeoLoader = false;
 	var Loader = false;
 	
-	
-	if (navigator.onLine) {
-		
-		
-    
-	}
-	
-	else{
-		
-		alert("not online");
-		
-	}
-	
 	function myCall() {
 
     $.ajax
 	({
 	    type: "GET",
-	    url: "http://www.naturalappbility.com/admin/dbGrab.php",
+	    url: "http://www.naturalappbility.com/_old/admin/dbGrab.php",
 	    crossDomain: true,
     	dataType: "json",
 	    cache: false,
@@ -132,14 +119,6 @@ $(document).ready(function() {
 	//setTimeout(myCall2, 100);
 	//setTimeout(handleBlog, 200);
 	
-	$(".backButton").click(function(e){
-		
-	    e.stopImmediatePropagation();
-	    e.preventDefault();
-	    $.mobile.changePage("#blog");
-
-	});
-	
 	$("#bottomSectionB").click(function(e){
 		
 		e.stopImmediatePropagation();
@@ -155,7 +134,7 @@ $(document).ready(function() {
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#page1");
-		
+
 	});
 	
 	$("#tab1").click(function(e){
@@ -163,7 +142,7 @@ $(document).ready(function() {
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#page2");
-		
+	    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 	});
 
 	$("#tab2").click(function(e){
@@ -172,6 +151,7 @@ $(document).ready(function() {
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#page3");
+
 	});
 	
 	$("#tab3").click(function(e){
@@ -180,6 +160,7 @@ $(document).ready(function() {
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#page4");
+
 	});
 	
 	$(".tabOver").mouseover(function(){
