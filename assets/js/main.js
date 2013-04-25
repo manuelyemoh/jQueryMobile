@@ -2,100 +2,184 @@ $(document).ready(function() {
 	
 	var currentId;
 	
-	var myArray = [];
-	var items = [];
-	var twit = [];
+	//arrays
+	var speakersArray = [];
+	var vimeoArray = [];
+	var eventsArray = [];
+	var speakersArray = [];
+	var modesArray = [];
+	
 	var imgLine = "imgLine";
 
 	var vimeoClass = "Varray";
 	var twitterClass = "Tarray";
 	
-	//true false content loaded
+	function modesRequest(){
 	
-	var lineupLoader = false;
-	var blogLoader = false;
-	var twitterLoader = false;
-	var vimeoLoader = false;
-	var Loader = false;
-	
-	function myCall() {
+	var url =  "http://naturalappbility.com/glugCMS_cake_2_0/modes/latest.json";
 
-    $.ajax
-	({
-	    type: "GET",
-	    url: "http://www.naturalappbility.com/_old/admin/dbGrab.php",
-	    crossDomain: true,
-    	dataType: "json",
-	    cache: false,
-	    success: function(data)
-		    {
-
-		        $.each(data, function(key, val) {
-				
-				myArray.push(val);
-
- 				});
- 				setTimeout(handleDataOne, 500);
-		       
-		    },
-    	error: function(XMLHttpRequest, textStatus, errorThrown) {
-    		 alert("errorThrown-->"+errorThrown);
-  			}
-	});
-	}
-	
-	function myCall2() {
 		
-		var url =  "http://vimeo.com/api/v2/glug/videos.json";
-		
-    	$.getJSON(url + "?callback=?", null, function(data) {
-			
-			//alert(data);
+		$.getJSON(url, null, function(data) {
 			
 			$.each(data, function(key, val) {
 				
-				items.push(val);
-				//alert(items);
-				//alert( key + ": " + val );
+				modesArray.push(val);
+
  			});
- 			setTimeout(handleDataTwo, 500);
+ 			
+ 			setTimeout(handleModesData, 500);
+				
+          });
+		
+	}
+	
+	function eventsRequest(){
+	
+	var url =  "http://naturalappbility.com/glugCMS_cake_2_0/events/latest.json";
+
+		
+		$.getJSON(url, null, function(data) {
+			
+			$.each(data, function(key, val) {
+				
+				eventsArray.push(val);
+
+ 			});
+ 			
+ 			setTimeout(handleEventsData, 500);
+				
+          });
+		
+	}
+	
+	function speakersRequest() {
+	
+	var url =  "http://naturalappbility.com/glugCMS_cake_2_0/speakers/latest.json";
+		
+    	$.getJSON(url, null, function(data) {
+			
+			$.each(data, function(key, val) {
+				
+				speakersArray.push(val);
+
+ 			});
+ 			
+ 			setTimeout(handleSpeakersData, 500);
 				
           });
      }
+
+	function vimeoRequest() {
+		
+		var url =  "http://vimeo.com/api/v2/glug/videos.json";
+		
+    	$.getJSON(url, null, function(data) {
+			
+			
+			$.each(data, function(key, val) {
+				
+				vimeoArray.push(val);
+
+ 			});
+ 			
+ 			setTimeout(handleVimeoData, 500);
+				
+          });
+     }
+
+     //Modes
+			
+     function handleModesData(){
+     
+     	 switch(modesArray[0].Mode.status){
+			
+				case "Live":
+				
+					//setTimeout(eventsRequest, 100);
+					console.log("App is Live");
+
+				break;
+				
+				case "Down":
+				  
+				  	console.log("App is Down");
+				  
+				break;
+				
+				case "TBC":
+				
+					console.log("App is TBC");
+				
+				break;
+				
+				default:
+				console.log("Error has occoured, going to default mode");
+		 } 
+      }
+     
+     function handleEventsData(){
+	     
+	     for(var a = 0; a < eventsArray.length; a++){
+		     
+		     /*alert(eventsArray[0].Event.name);
+		     alert(eventsArray[0].Event.date);
+		     alert(eventsArray[0].Event.location);
+		     alert(eventsArray[0].Event.description);
+		     alert(eventsArray[0].Event.tickets);*/
+		     		     
+	     }
+     }
      
      //Line Up
-     function handleDataOne(){
+     function handleSpeakersData(){
      	
      	var externalURL = 'http://'
      	var lineUpClass = "array";
      	
-     	for(var a = 0; a < myArray.length; a++){
-			
-			
+     	for(var a = 0; a < speakersArray.length; a++){
+     	
+     		/*alert(speakersArray[a].Speaker.name);
+     		alert(speakersArray[a].Speaker.company);
+     		alert(speakersArray[a].Speaker.description);
+     		alert(speakersArray[a].Speaker.twitter);
+     		alert(speakersArray[a].Speaker.linkedIn);
+     		alert(speakersArray[a].Speaker.website);*/
+     		//console.log(speakersArray[a].Speaker.photo_medium);
+     		
+     		//http://www.naturalappbility.com/glugCMS_cake_2_0/img/uploads/ldn.png
+    			
 			$('#lineUpcontent').append('<div class="'+imgLine+[a]+'"></div>');
-			$('#lineUpcontent .'+imgLine+[a]).css('background-image', 'url(http://www.naturalappbility.com/admin/images/'+myArray[a].fileName+')');
+			$('#lineUpcontent .'+imgLine+[a]).css('background-image', 'url(http://www.naturalappbility.com/glugCMS_cake_2_0/'+speakersArray[a].Speaker.photo_medium+')');
 			$('#lineUpcontent .'+imgLine+[a]).css('height', '180px');
 			$('#lineUpcontent .'+imgLine+[a]).css('width', '300px');
 			$('#lineUpcontent .'+imgLine+[a]).css('margin', '14px 0px 0px 0px');
 			$('#lineUpcontent .'+imgLine+[a]).css('position', 'relative');
 			$('#lineUpcontent .'+imgLine+[a]).css('z-index', '10');
-			$('#lineUpcontent ').append('<h1 class="'+lineUpClass+[1]+'">'+myArray[a].postTitle+'</h1>');
-			$('#lineUpcontent ').append('<p class="'+lineUpClass+[2]+'">'+myArray[a].postDetail+'</p>');
-			$('#lineUpcontent ').append('<div id="socialMedia"><div id="twitter"><a href="'+'https://twitter.com/'+myArray[a].twitter+'" class="array3">'+myArray[a].twitter+'</a></div><div id="linkedIn"><a href="'+externalURL+myArray[a].linkedIn+'" class="array4">'+myArray[a].linkedIn+'</a></div><div id="website"><a href="'+myArray[a].webLink+'" class="array4">'+myArray[a].webLink+'</a></div></div>');
-			$('#lineUpcontent ').append('<div id="blankSpaceLineUp"></div>');
+			$('#lineUpcontent').append('<div class="random">'+'<div class="location">LDN</div>'+'</div>');
+			$('#lineUpcontent .random').css('background-image', 'url(http://www.naturalappbility.com/glugCMS_cake_2_0/img/uploads/ldn.png)');
+			$('#lineUpcontent ').append('<h1 class="'+lineUpClass+[1]+'">'+speakersArray[a].Speaker.name+'</h1>');
+			$('#lineUpcontent ').append('<hr>');
+			$('#lineUpcontent ').append('<div class="description">'+speakersArray[a].Speaker.description+'</div>');
+			$('#lineUpcontent').append('<div id="socialMedia"></div>');
+			$('#lineUpcontent #socialMedia').append('<div class="test">Hello Hello</div>');
+			/*$('#lineUpcontent ').append('<h1 class="'+lineUpClass+[1]+'">'+speakersArray[a].postTitle+'</h1>');
+			$('#lineUpcontent ').append('<p class="'+lineUpClass+[2]+'">'+speakersArray[a].postDetail+'</p>');
+			$('#lineUpcontent ').append('<div id="socialMedia"><div id="twitter"><a href="'+'https://twitter.com/'+speakersArray[a].twitter+'" class="array3">'+speakersArray[a].twitter+'</a></div><div id="linkedIn"><a href="'+externalURL+speakersArray[a].linkedIn+'" class="array4">'+speakersArray[a].linkedIn+'</a></div><div id="website"><a href="'+speakersArray[a].webLink+'" class="array4">'+speakersArray[a].webLink+'</a></div></div>');
+			$('#lineUpcontent ').append('<div id="blankSpaceLineUp"></div>');*/
      		
      	}
      }
      
      //Vimeo
-     function handleDataTwo(){
+     function handleVimeoData(){
      	
      	for(var i = 0; i<=4; i++){
      		
-     		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+items[i].id+'"></iframe>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+items[i].title+'</div>');
-     		$('#vime0oContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+items[i].description+'</div>');
-     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[4]+'">'+items[i].upload_date+'</div>');
+     		alert("here");
+     		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+vimeoArray[i].id+'"></iframe>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+vimeoArray[i].title+'</div>');
+     		$('#vime0oContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+vimeoArray[i].description+'</div>');
+     		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[4]+'">'+vimeoArray[i].upload_date+'</div>');
      		$('#vimeoContent div.scrollable').append('<div id="blankSpaceVimeo"></div>');
 
      	}
@@ -103,7 +187,7 @@ $(document).ready(function() {
      }
      
      //Blog
-     function handleBlog(){
+     function handleBlogData(){
      	
      		$('#blogContent div.scrollable').append('<div id="blogCell0"></div>');
      		$('#blogContent #blogCell0').css('background-image', 'url(http://www.naturalappbility.com/admin/images/blogImage0.jpg)');
@@ -114,23 +198,19 @@ $(document).ready(function() {
      		$('#blogContent div.scrollable').append('<div id="blankSpaceBlog"></div>');				
      		
      }
-     
-	//setTimeout(myCall, 100);
-	//setTimeout(myCall2, 100);
-	//setTimeout(handleBlog, 200);
 	
 	$("#bottomSectionB").click(function(e){
 		
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#lineUp");
-		setTimeout(myCall, 500);
+		setTimeout(speakersRequest, 500);
 
 	});
 	
 	$("#tab0").click(function(e){
-		
-		setTimeout(handleBlog, 500);
+			
+		setTimeout(handleBlogData, 500);
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#page1");
@@ -147,10 +227,10 @@ $(document).ready(function() {
 
 	$("#tab2").click(function(e){
 		
-		setTimeout(myCall2, 500);
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#page3");
+	    setTimeout(vimeoRequest, 500);
 
 	});
 	
@@ -203,6 +283,11 @@ $(document).ready(function() {
 			$(tabObj).children().css('color', '#999999');
 	});
 
+//init application
+
+setTimeout(modesRequest, 100);
+
+
 });
 
 ( function( $, undefined ) {
@@ -211,5 +296,31 @@ $( document ).bind( "mobileinit", function() {
 	$.mobile.pushStateEnabled = false;
 });
 
-})( jQuery );
+});
+
+  
+/*$.ajax
+({
+    type: "GET",
+    url: "http://naturalappbility.com/glugCMS_cake_2_0/speakers/latest.json",
+    crossDomain: true,
+	dataType: "json",
+	//headers: {"Accept": "text/html, application/json"},
+    cache: false,
+    success: function(data)
+	    {
+		    alert(data);
+	        $.each(data, function(key, val) {
+			
+			speakersArray.push(val);
+			alert(val);
+			
+				});
+				//setTimeout(handleDataOne, 500);
+	       
+	    },
+	error: function(XMLHttpRequest, textStatus, errorThrown) {
+		 alert("errorThrown-->"+errorThrown);
+		 }
+});*/
 

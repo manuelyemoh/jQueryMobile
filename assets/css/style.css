@@ -37,26 +37,6 @@ p{
  * Main Page
  */
 
-.topNavi .glugCase{
-
-    left:50%;
-    width:50%;
-    position:absolute;
-	
-}
-
-.topNavi .glugLogo{
-	
-	font-family: helvetica;
-	background-image: url("../images/glugLogo.png");
-    height: 50px;
-    left: -37.5px;
-    position: absolute;
-    width: 75px;
-	
-}
-
-
 .middleContent{
 	
 	background-color: #eeeeee;
@@ -74,159 +54,46 @@ section{
 	
 }
 
-#blog #scrollMe{
+	#main #scrollMe{
+		
+		background-color:black;
+	    height: 400px;
+	    margin: 0 0 0 -165px;
+	    overflow: auto;
+	    position: relative;
+	    width: 330px;
+	    -webkit-overflow-scrolling: touch;
+	}
 	
-    height: 400px;
-    margin: 0 0 0 -165px;
-    overflow: auto;
-    position: relative;
-    width: 330px;
-    -webkit-overflow-scrolling: touch;
-}
+	#main #scrollMe .innerContent{
+	
+		background-image:url("../images/mainBg.jpg");
+		height:433px;
+		width: 315px;
 
-#scrollMe #topSectionB{
-	
-	height: 118px;
-    width: 100%;
-	
-}
+	}
 
-#scrollMe #topSectionB .glugBlogLogo{
+	#scrollMe .glugLogoMain{
+			
+	 	background-image: url("../images/glugLogoMain.png");
+	 	float: left;
+	 	height: 127px;
+	 	left: 100px;
+	 	position: relative;
+	 	top: 30px;
+	 	width: 127px;
+	}
 	
-	background-image: url("../images/glugBlogLogo.png");
-    height: 94px;
-    left: 32px;
-    position: relative;
-    top: 13px;
-    width: 94px;
-    float:left;
-}
-
-#scrollMe #topSectionB h1{
-	
-	color: #000000;
-    float: left;
-    font-size: 20px;
-    height: 100px;
-    left: 50px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    text-shadow: none;
-    top: 34px;
-    width: 153px;
-	
-}
-
-#scrollMe #topSectionB h1 span{
-	
-    font-size: 12px;
-    left: -2px;
-    position: relative;
-    top: -5px;
-
-}
-
-#scrollMe hr{
-	
-	border: 1px solid;
-    color: #000000;
-    margin-left: 11px;
-    position: relative;
-    width: 90%;
-	
-}
-
-#scrollMe #middleSectionB{
-	
-	height: 186px;
-    padding-left: 19px;
-    position: relative;
-    width: 90%;
-	
-}
-
-#scrollMe #middleSectionB h1{
-	
-	color: #000000;
-    font-size: 12px;
-    margin: 10px 0 0;
-    text-shadow: none;
-	
-}
-
-#scrollMe #middleSectionB h1 span{
-	
-	color:#ff6600;
-	
-}
-
-#scrollMe #middleSectionB h2{
-	
-	color: #000000;
-    font-size: 24px;
-    margin: -4px 0 0;
-    text-shadow: none;
-	
-}
-
-#scrollMe #middleSectionB h3{
-	
-	color: #000000;
-    font-size: 34px;
-    margin: 2px 0 0;
-    text-shadow: none;
-	
-}
-
-#scrollMe #middleSectionB #h31{
-
-    margin: -14px 0 0;
-	
-}
-
-#scrollMe #middleSectionB h4{
-	
-	color: #000000;
-    font-size: 12px;
-    margin: 9px 0 0;
-    text-shadow: none;
-    width: 144px;
-	
-}
-
-#scrollMe #middleSectionB h5{
-	
-	color: #000000;
-    font-size: 9px;
-    margin: 4px 0 0;
-    text-shadow: none;
-    width: 100%;
-	
-}
-
-
-#scrollMe #bottomSectionB{
-	
-	background-color: #FF6600;
-    height: 55px;
-    margin: 10px 0 0 12px;
-    width: 296px;
-	
-}
-
-#scrollMe #bottomSectionB h1{
-	
-	color: #FFFFFF;
-    font-size: 25px;
-    font-weight: normal;
-    left: 99px;
-    margin: 0;
-    position: relative;
-    top: 13px;
-    width: 100px;
-
-}
+	#scrollMe .established{
+		
+		background-image: url("../images/est.png");
+	    bottom: -20px;
+	    height: 55px;
+	    left: 136px;
+	    position: absolute;
+	    width: 55px;
+    
+	}
 
 #blankSpace{
 	
@@ -252,9 +119,9 @@ section{
 	
 }
 
-#blog{
+#main{
 	
-	background-color:#ffffff;
+	background-color:#000000;
 	
 }
 
@@ -289,7 +156,7 @@ section{
 }
 
 
-#blog, #lineUp, #page1, #page2, #page3, #page4{
+#main, #lineUp, #page1, #page2, #page3, #page4{
 	
 	width:100%;
 	height:100%;
@@ -318,70 +185,70 @@ section{
  * Blog Content 
  */
 
-#blogContent #guideBackground{
+	#blogContent #guideBackground{
+		
+		background-image:url('../images/blogGuide.jpg');
+		height:483px;
+		width:363px;
+		position:absolute;
+		
+	}
 	
-	background-image:url('../images/blogGuide.jpg');
-	height:483px;
-	width:363px;
-	position:absolute;
+	#blogContent .scrollable{
+		
+		height: 400px;
+	    margin: 22px 0 0 -170px;
+	    overflow: auto;
+	    position: relative;
+	    top: 28px;
+	    width: 380px;
+	    -webkit-overflow-scrolling: touch;
+		
+	}
 	
-}
-
-#blogContent .scrollable{
+	#blogContent #blogCell0{
+		
+		
+	    height: 207px;
+	    margin: 11px 0 0 19px;
+	    position: relative;
+	    width: 300px;
+	    z-index: 10;
+		
+	}
 	
-	height: 400px;
-    margin: 22px 0 0 -170px;
-    overflow: auto;
-    position: relative;
-    top: 28px;
-    width: 380px;
-    -webkit-overflow-scrolling: touch;
+	#blogContent #blogCell1{
+		
+	    height: 108px;
+	    margin: 33px 0 0 19px;
+	    position: relative;
+	    width: 300px;
+	    z-index: 10;
+		
+	}
 	
-}
-
-#blogContent #blogCell0{
+	#blogContent #blogCell2{
+		
+	    font-size: 12px !important;
+	    left: 0 !important;
+	    line-height: 14px;
+	    margin: 12px 0 0 19px;
+	    position: relative;
+	    width: 300px;
+	    z-index: 10;
+		
+	}
 	
-	
-    height: 207px;
-    margin: 11px 0 0 19px;
-    position: relative;
-    width: 300px;
-    z-index: 10;
-	
-}
-
-#blogContent #blogCell1{
-	
-    height: 108px;
-    margin: 33px 0 0 19px;
-    position: relative;
-    width: 300px;
-    z-index: 10;
-	
-}
-
-#blogContent #blogCell2{
-	
-    font-size: 12px !important;
-    left: 0 !important;
-    line-height: 14px;
-    margin: 12px 0 0 19px;
-    position: relative;
-    width: 300px;
-    z-index: 10;
-	
-}
-
-#blogContent #blogCell3{
-	
-	color:#ff6600;
-    font-size: 12px !important;
-    left: 0 !important;
-    margin: 20px 1px 2px 20px;
-    position: relative;
-    width: 310px;
-    z-index: 10;
-    
+	#blogContent #blogCell3{
+		
+		color:#ff6600;
+	    font-size: 12px !important;
+	    left: 0 !important;
+	    margin: 20px 1px 2px 20px;
+	    position: relative;
+	    width: 310px;
+	    z-index: 10;
+	    
 }
 
 
@@ -389,95 +256,139 @@ section{
  * line Up
  */
 
-#lineUp #scrollMe{
+	#lineUp #scrollMe{
+		
+		height: 400px;
+		margin: 0 0 0 -152px;
+		overflow: auto;
+		position: relative;
+		width: 330px;
+		-webkit-overflow-scrolling: touch;
 	
-	height: 400px;
-	margin: 0 0 0 -152px;
-	overflow: auto;
-	position: relative;
-	width: 330px;
-	-webkit-overflow-scrolling: touch;
+	}
 
-}
+		#lineUp #scrollMe #lineUpcontent{
+			
+			height: 414px;
+			z-index:10;
+			
+		}
+		
+		#lineUp #lineUpcontent .array0{
+			
+			background-image:url("../");
+			height: 180px;
+			width: 300px;
+			position: relative;
+			z-index: 10;
+			margin: 14px 0px 0px 0px;
+			
+		}
+	
+		#lineUp #lineUpcontent h1{
+			
+			color: #666666!important;
+			font-size: 18px!important;
+			font-weight: bold;
+			margin: 23px 0px 0px 37px;
+			text-shadow: none;
+			font-family: helvetica;
+			
+		}
+		
+		#lineUp #lineUpcontent .random{
+		
+			background-image:url("../");
+			height: 38px;
+			width: 40px;
+			position: absolute;
+			z-index: 10;
+			margin: 14px 0px 0px -4px;
+			
+		}
 
-#lineUp #scrollMe #lineUpcontent{
-	
-	height: 414px;
-	z-index:10;
-	
-}
+			#lineUp #lineUpcontent .random .location{
+			
+				font-family: Georgia;
+				font-size: 10px;
+				margin: 14px 0px 0px 10px;
+				text-shadow: none;
+				color: white;
+				
+				
+			}
+		
+		#lineUpcontent hr{
+			
+			border: 2px solid;
+			color: #ff7c26;
+			margin-left: 1px;
+			margin-top: 15px;
+			position: relative;
+			width: 90%;
+			
+		}
+			
+		#lineUp #lineUpcontent .description{
+			
+			font-family: Georgia;
+			font-size: 18px;
+			margin: 14px 0px 0px 2px;
+			text-shadow: none;
+			color: #666666;
+				
+		}
 
-#lineUp #lineUpcontent .array0{
-	
-	background-image:url("../");
-	height: 180px;
-	width: 300px;
-	position: relative;
-	z-index: 10;
-	margin: 14px 0px 0px 0px;
-	
-}
+		#lineUp #lineUpcontent p{
+			
+			font-family: helvetica;
+		    font-size: 11px;
+		    margin: 7px 0 0;
+		    width: 285px;
+			
+		}
 
-#lineUp #lineUpcontent h1{
-	
-	color: #fc6621!important;
-	font-size: 15px!important;
-	margin: 15px 0px 0px 0px;
-	text-shadow: none;
-	font-family: helvetica;
-	
-}
+		#lineUp #lineUpcontent #socialMedia{
+			
+			width: 100%;
+			height: 100px;
+			margin-left: -7px;
+		
+		}
 
-#lineUp #lineUpcontent p{
-	
-	font-family: helvetica;
-    font-size: 11px;
-    margin: 7px 0 0;
-    width: 285px;
-	
-}
+		#lineUp #lineUpcontent #twitter{
+			
+			background-image: url("../images/spriteLineUpLogos.jpg");
+		    background-repeat: no-repeat;
+		    height: 30px;
+		    margin: 10px 1px 2px 4px;
+		    position: relative;
+		    text-decoration: underline;
+		    width: 300px;
+		    z-index:1000;
+		}
 
-#lineUp #lineUpcontent #socialMedia{
-	
-	width: 100%;
-	height: 100px;
-	margin-left: -7px;
-
-}
-
-#lineUp #lineUpcontent #twitter{
-	
-	background-image: url("../images/spriteLineUpLogos.jpg");
-    background-repeat: no-repeat;
-    height: 30px;
-    margin: 10px 1px 2px 4px;
-    position: relative;
-    text-decoration: underline;
-    width: 300px;
-    z-index:1000;
-}
-
-#lineUp #lineUpcontent #linkedIn{
-	
-	background: url("../images/spriteLineUpLogos.jpg") 0 -31px;
-	background-repeat:no-repeat;
-	height: 30px;
-	width: 27px;
-	margin: 2px 0px 0px 4px;
-	text-decoration: underline;
-	width:300px;
-}
-
-#lineUp #lineUpcontent #website{
-	
-	background: url("../images/spriteLineUpLogos.jpg") 0 -60px;
-	background-repeat:no-repeat;
-	height: 30px;
-	width: 27px;
-	margin: 2px 0px 0px 4px;
-	text-decoration: underline;
-	width:300px;
-}
+		#lineUp #lineUpcontent #linkedIn{
+			
+			background: url("../images/spriteLineUpLogos.jpg") 0 -31px;
+			background-repeat:no-repeat;
+			height: 30px;
+			width: 27px;
+			margin: 2px 0px 0px 4px;
+			text-decoration: underline;
+			width:300px;
+		}
+		
+		#lineUp #lineUpcontent #website{
+			
+			background: url("../images/spriteLineUpLogos.jpg") 0 -60px;
+			background-repeat:no-repeat;
+			height: 30px;
+			width: 27px;
+			margin: 2px 0px 0px 4px;
+			text-decoration: underline;
+			width:300px;
+		}
 
 /*#lineUp a{
 	
@@ -503,77 +414,77 @@ section{
 	
 }
 
-#vimeoContent .scrollable{
-	
-	margin: 11px 0px 0px 10px;
-	height: 400px;
-	overflow: auto;
-	position: relative;
-	top: 0px;
-	width: 330px;
-	-webkit-overflow-scrolling: touch;
-	
-}
+	#vimeoContent .scrollable{
+		
+		margin: 11px 0px 0px 10px;
+		height: 400px;
+		overflow: auto;
+		position: relative;
+		top: 0px;
+		width: 330px;
+		-webkit-overflow-scrolling: touch;
+		
+	}
 
-#vimeoContent .Varray0{
-	
-	font-size: 14px;
-	font-weight: bold!important;
-	margin-top: 21px;
-	color:#ff6600;
-}
+	#vimeoContent .Varray0{
+		
+		font-size: 14px;
+		font-weight: bold!important;
+		margin-top: 21px;
+		color:#ff6600;
+	}
 
-#vimeoContent .Varray1{
+	#vimeoContent .Varray1{
+		
+		font-size: 12px;
+		font-weight: bold!important;
+		margin-top: 15px;
+		width: 95%;
+	}
 	
-	font-size: 12px;
-	font-weight: bold!important;
-	margin-top: 15px;
-	width: 95%;
-}
-
-#vimeoContent .Varray2{
+	#vimeoContent .Varray2{
+		
+		font-size: 10px;
+		margin-top: 5px;
+		
+	}
 	
-	font-size: 10px;
-	margin-top: 5px;
+	#vimeoContent .Varray3{
+		
+		font-size: 10px;
+		margin-top: 3px;
+		
+	}
 	
-}
-
-#vimeoContent .Varray3{
+	#vimeoContent .Varray4{
+		
+		color:#ff6600;	
+		font-size: 10px;
+		margin-top:15px;
+	}
 	
-	font-size: 10px;
-	margin-top: 3px;
+	#vimeoContent .Varray5{
+		
+		font-size: 10px;
+		margin-top: 3px;
+		
+	}
 	
-}
-
-#vimeoContent .Varray4{
+	#vimeoContent .Varray6{
+		
+		font-size: 10px;
+		margin-top: 17px;
+		
+	}
 	
-	color:#ff6600;	
-	font-size: 10px;
-	margin-top:15px;
-}
-
-#vimeoContent .Varray5{
 	
-	font-size: 10px;
-	margin-top: 3px;
-	
-}
-
-#vimeoContent .Varray6{
-	
-	font-size: 10px;
-	margin-top: 17px;
-	
-}
-
-
-#vimeoContent .Varray7{
-	
-	color:#ff6600;
-	font-size: 10px;
-	margin-top: 23px;
-	
-}
+	#vimeoContent .Varray7{
+		
+		color:#ff6600;
+		font-size: 10px;
+		margin-top: 23px;
+		
+	}
 
 /*
  * Twitter stuff
@@ -585,17 +496,19 @@ section{
 	
 }
 
-#twitterWidget section{
-	
-	margin-left: -165px;
-    position: relative;
-    top: 60px;
-}
+	#twitterWidget section{
+		
+		margin-left: -165px;
+	    position: relative;
+	    top: 60px;
+	}
 
 .scrollable {
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
-        }
+
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+
+}
  
             /* iOS specific fix, don't use it on Android devices */
         .scrollable > * {
