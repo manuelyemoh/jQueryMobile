@@ -95,7 +95,6 @@ $(document).ready(function() {
 			
 				case "Live":
 				
-					//setTimeout(eventsRequest, 100);
 					console.log("App is Live");
 
 				break;
@@ -126,7 +125,12 @@ $(document).ready(function() {
 		     alert(eventsArray[0].Event.location);
 		     alert(eventsArray[0].Event.description);
 		     alert(eventsArray[0].Event.tickets);*/
-		     		     
+		     
+		     $('#eventsContent').append('<div class="cell0">'+eventsArray[a].Event.name+'</div>');
+		     $('#eventsContent').append('<div class="cell1">'+eventsArray[a].Event.date+'</div>');
+		     $('#eventsContent').append('<div class="cell2">'+eventsArray[a].Event.location+'</div>');
+		     $('#eventsContent').append('<div class="cell3">'+eventsArray[a].Event.description+'</div>');
+		     $('#eventsContent').append('<div class="cell4">'+eventsArray[a].Event.tickets+'</div>');
 	     }
      }
      
@@ -213,8 +217,8 @@ $(document).ready(function() {
 		setTimeout(handleBlogData, 500);
 		e.stopImmediatePropagation();
 	    e.preventDefault();
-	    $.mobile.changePage("#page1");
-
+	    $.mobile.changePage("#events");
+	    setTimeout(eventsRequest, 100);
 	});
 	
 	$("#tab1").click(function(e){
