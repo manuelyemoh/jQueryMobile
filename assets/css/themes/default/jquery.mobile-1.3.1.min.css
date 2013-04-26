@@ -1078,7 +1078,7 @@ a.ui-link-inherit {
 }
 
 body.ui-mobile-viewport,div.ui-mobile-viewport {
-	overflow-x:hidden;
+	
 }
 
 .ui-mobile [data-role=page],.ui-mobile [data-role=dialog],.ui-page {
@@ -1268,7 +1268,6 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 .ui-content {
 	border-width:0;
 	overflow:visible;
-	overflow-x:hidden;
 	padding:0;
 }
 

@@ -179,7 +179,7 @@ $(document).ready(function() {
      	
      	for(var i = 0; i<=4; i++){
      		
-     		alert("here");
+     		//("here");
      		$('#vimeoContent div.scrollable').append('<iframe src="'+'http://player.vimeo.com/video/+'+vimeoArray[i].id+'"></iframe>');
      		$('#vimeoContent div.scrollable').append('<div class="'+vimeoClass+[0]+'">'+vimeoArray[i].title+'</div>');
      		$('#vime0oContent div.scrollable').append('<div class="'+vimeoClass+[1]+'">'+vimeoArray[i].description+'</div>');
@@ -212,7 +212,7 @@ $(document).ready(function() {
 
 	});
 	
-	$("#tab0").click(function(e){
+	$(".tab0").click(function(e){
 			
 		setTimeout(handleBlogData, 500);
 		e.stopImmediatePropagation();
@@ -221,7 +221,7 @@ $(document).ready(function() {
 	    setTimeout(eventsRequest, 100);
 	});
 	
-	$("#tab1").click(function(e){
+	$(".tab1").click(function(e){
 		
 		e.stopImmediatePropagation();
 	    e.preventDefault();
@@ -229,7 +229,7 @@ $(document).ready(function() {
 	    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 	});
 
-	$("#tab2").click(function(e){
+	$(".tab2").click(function(e){
 		
 		e.stopImmediatePropagation();
 	    e.preventDefault();
@@ -238,7 +238,7 @@ $(document).ready(function() {
 
 	});
 	
-	$("#tab3").click(function(e){
+	$(".tab3").click(function(e){
 		
 		setTimeout(handleBlog, 500);
 		e.stopImmediatePropagation();

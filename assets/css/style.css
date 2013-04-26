@@ -261,9 +261,15 @@ section{
 * Events
 */
 
-	#events{
+	#events .scrollable{
 		
-		
+		height: 430px;
+	    margin: 22px 0 0 -170px;
+	    overflow: auto;
+	    position: relative;
+	    top: 28px;
+	    width: 380px;
+	    -webkit-overflow-scrolling: touch;
 		
 	}
 
