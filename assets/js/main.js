@@ -289,7 +289,7 @@ $(document).ready(function() {
 
 //init application
 
-//setTimeout(modesRequest, 100);
+setTimeout(modesRequest, 100);
 
 
 });
