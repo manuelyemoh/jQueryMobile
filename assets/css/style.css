@@ -56,12 +56,12 @@ section{
 
 	#main #scrollMe{
 		
-		background-color:black;
-	    height: 400px;
+		background-color: black;
+	    height: 430px;
 	    margin: 0 0 0 -165px;
 	    overflow: auto;
 	    position: relative;
-	    width: 330px;
+	    width: 340px;
 	    -webkit-overflow-scrolling: touch;
 	}
 	
@@ -87,10 +87,10 @@ section{
 	#scrollMe .established{
 		
 		background-image: url("../images/est.png");
-	    bottom: -20px;
 	    height: 55px;
 	    left: 136px;
 	    position: absolute;
+	    top: 360px;
 	    width: 55px;
     
 	}
