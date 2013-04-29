@@ -273,11 +273,11 @@ section{
 	#events .scrollable{
 		
 		height: 430px;
-	    margin: 22px 0 0 -170px;
+	    margin: 22px 0 0 -160px;
 	    overflow: auto;
 	    position: relative;
 	    top: 28px;
-	    width: 315px;
+	    width: 309px;
 	    -webkit-overflow-scrolling: touch;
 		
 	}
@@ -560,3 +560,5 @@ overflow-y: scroll;
     width: 39px !important;
 	
 }
+
+.ui-page { -webkit-backface-visibility: hidden; }
