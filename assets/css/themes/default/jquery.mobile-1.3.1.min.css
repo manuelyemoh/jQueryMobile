@@ -142,7 +142,7 @@
 }
 
 .ui-bar-b {
-
+	border:1px solid #333;
 	background:#333;
 	color:#fff;
 	font-weight:700;
