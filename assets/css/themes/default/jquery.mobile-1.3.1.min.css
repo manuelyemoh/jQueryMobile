@@ -1210,6 +1210,7 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 .ui-header,.ui-footer {
 	position:relative;
 	zoom:1;
+	margin-top: -1px;
 }
 
 .ui-mobile .ui-header,.ui-mobile .ui-footer {
