@@ -148,6 +148,7 @@
 	font-weight:700;
 	text-shadow:0 1px 0 #3e6790;
 	background-color:#333;
+	z-index: 1000;
 }
 
 .ui-bar-b,.ui-bar-b input,.ui-bar-b select,.ui-bar-b textarea,.ui-bar-b button {
