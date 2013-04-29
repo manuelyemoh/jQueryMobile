@@ -38,7 +38,7 @@ p{
 	background-image: url("../images/glugLogoNav.png");
     height: 44px;
     margin: auto;
-    width: 78px;
+    width: 70px;
     
 }
 
@@ -87,7 +87,7 @@ section{
 	 	background-image: url("../images/glugLogoMain.png");
 	 	float: left;
 	 	height: 127px;
-	 	left: 100px;
+	 	left: 95px;
 	 	position: relative;
 	 	top: 30px;
 	 	width: 127px;
@@ -97,7 +97,7 @@ section{
 		
 		background-image: url("../images/est.png");
 	    height: 55px;
-	    left: 136px;
+	    left: 130px;
 	    position: absolute;
 	    top: 360px;
 	    width: 55px;
