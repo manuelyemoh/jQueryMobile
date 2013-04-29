@@ -743,10 +743,6 @@ a.ui-link-inherit {
 
 .ui-icon-nodisc .ui-icon,.ui-icon-nodisc .ui-icon-searchfield:after,.ui-icon-nodisc .ui-icon-alt .ui-icon,.ui-icon-nodisc .ui-icon-alt .ui-icon-searchfield:after {
 
-	background-image: url("../../../images/extraNav.png") !important;
-    background-position: 0 0 !important;
-    height: 30px !important;
-    width: 39px !important;
 	
 }
 
@@ -1210,7 +1206,6 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 .ui-header,.ui-footer {
 	position:relative;
 	zoom:1;
-	margin-top: -1px;
 }
 
 .ui-mobile .ui-header,.ui-mobile .ui-footer {

@@ -277,7 +277,7 @@ section{
 	    overflow: auto;
 	    position: relative;
 	    top: 28px;
-	    width: 380px;
+	    width: 315px;
 	    -webkit-overflow-scrolling: touch;
 		
 	}
@@ -531,7 +531,6 @@ section{
 		
 		margin-left: -165px;
 	    position: relative;
-	    top: 60px;
 	}
 
 .scrollable {
@@ -553,11 +552,11 @@ overflow-y: scroll;
 	
 }
 
-.ui-icon-searchfield:after, .ui-icon-nodisc .ui-icon-alt .ui-icon, .ui-icon-nodisc .ui-icon-alt .ui-icon-searchfield:after {
-    background-image: none!important;
+.ui-icon-nodisc .ui-icon,.ui-icon-nodisc .ui-icon-searchfield:after,.ui-icon-nodisc .ui-icon-alt .ui-icon,.ui-icon-nodisc .ui-icon-alt .ui-icon-searchfield:after {
+
+	background-image: url("../images/extraNav.png") !important;
+    background-position: 0 0 !important;
+    height: 30px !important;
+    width: 39px !important;
+	
 }
-
-.header {position:fixed;z-index:10;top:0;width:100%}
-.content {padding:45px 15px}
-.footer {position:fixed;z-index:10;bottom:0;width:100%}
-
