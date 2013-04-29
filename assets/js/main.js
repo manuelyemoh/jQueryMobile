@@ -225,6 +225,7 @@ $(document).ready(function() {
 	    e.preventDefault();
 	    $.mobile.changePage("#lineUp");
 		setTimeout(speakersRequest, 500);
+		
 
 	});
 	
