@@ -213,12 +213,13 @@ $(document).ready(function() {
 	});
 	
 	$(".tab0").click(function(e){
-			
+		
 		setTimeout(handleBlogData, 500);
 		e.stopImmediatePropagation();
 	    e.preventDefault();
 	    $.mobile.changePage("#events");
 	    setTimeout(eventsRequest, 100);
+	    
 	});
 	
 	$(".tab1").click(function(e){
@@ -290,7 +291,6 @@ $(document).ready(function() {
 //init application
 
 setTimeout(modesRequest, 100);
-
 
 });
 
