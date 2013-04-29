@@ -86,6 +86,21 @@ $(document).ready(function() {
 				
           });
      }
+     
+     //backButton
+     
+     function backButtonHit(e){
+     
+     	alert("Hit Back");
+     
+     
+     }
+     
+     function menuButtonHit(e){
+	     
+	     alert("Hit Menu");
+	     
+     }
 
      //Modes
 			
@@ -96,7 +111,8 @@ $(document).ready(function() {
 				case "Live":
 				
 					console.log("App is Live");
-
+					document.addEventListener("backbutton", backButtonHit, false);
+					document.addEventListener("menubutton", menuButtonHit, false);
 				break;
 				
 				case "Down":
