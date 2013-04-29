@@ -33,6 +33,15 @@ p{
 	
 }
 
+#navImage{
+	
+	background-image: url("../images/glugLogoNav.png");
+    height: 44px;
+    margin: auto;
+    width: 78px;
+    
+}
+
 /*
  * Main Page
  */
@@ -542,6 +551,10 @@ overflow-y: scroll;
 	width:100%;
 	height:100px;
 	
+}
+
+.ui-icon-searchfield:after, .ui-icon-nodisc .ui-icon-alt .ui-icon, .ui-icon-nodisc .ui-icon-alt .ui-icon-searchfield:after {
+    background-image: none!important;
 }
 
 
