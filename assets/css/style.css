@@ -50,7 +50,7 @@ p{
 	
 	background-color: #eeeeee;
     height: 100%;
-    position: absolute;
+    position: fixed;
     width: 100%;
     overflow:hidden;
 }
@@ -270,13 +270,12 @@ section{
 * Events
 */
 
-	#events .scrollable{
+ 	#events .scrollable{
 		
 		height: 430px;
-	    margin: 22px 0 0 -160px;
+	    margin: 15px 0 0 -160px;
 	    overflow: auto;
 	    position: relative;
-	    top: 28px;
 	    width: 309px;
 	    -webkit-overflow-scrolling: touch;
 		

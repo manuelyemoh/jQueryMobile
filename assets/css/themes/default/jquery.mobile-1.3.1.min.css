@@ -515,7 +515,7 @@
 }
 
 .ui-btn-down-d {
-	border:1px solid #aaa;
+	/*border:1px solid #aaa;
 	background:#eee;
 	font-weight:700;
 	color:#333;
@@ -525,11 +525,11 @@
 	background-image:-moz-linear-gradient(#e5e5e5,#f2f2f2);
 	background-image:-ms-linear-gradient(#e5e5e5,#f2f2f2);
 	background-image:-o-linear-gradient(#e5e5e5,#f2f2f2);
-	background-image:linear-gradient(#e5e5e5,#f2f2f2);
+	background-image:linear-gradient(#e5e5e5,#f2f2f2);*/
 }
 
 .ui-btn-down-d:visited,.ui-btn-down-d:hover,.ui-btn-down-d a.ui-link-inherit {
-	color:#333;
+	
 }
 
 .ui-btn-up-d,.ui-btn-hover-d,.ui-btn-down-d {
@@ -1027,9 +1027,7 @@ a.ui-link-inherit {
 }
 
 .ui-focus,.ui-btn:focus {
-	-moz-box-shadow:inset 0 0 3px #387bbe,0 0 9px #387bbe;
-	-webkit-box-shadow:inset 0 0 3px #387bbe,0 0 9px #387bbe;
-	box-shadow:inset 0 0 3px #387bbe,0 0 9px #387bbe;
+	
 }
 
 .ui-input-text.ui-focus,.ui-input-search.ui-focus {
@@ -1234,7 +1232,7 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 }
 
 .ui-footer>.ui-btn-icon-notext,.ui-header>.ui-btn-icon-notext,.ui-header-fixed.ui-fixed-hidden>.ui-btn-icon-notext {
-	top:9px;
+	top:0px;
 }
 
 .ui-header-fixed>.ui-btn-icon-notext {
@@ -2811,8 +2809,10 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 }
 
 .ui-btn-icon-notext {
-	height: 30px;
-    width: 34px;
+
+	height: 42px;
+	width: 45px;
+	
 }
 
 .ui-btn-icon-notext .ui-btn-inner {
@@ -2822,7 +2822,7 @@ body.ui-mobile-viewport,div.ui-mobile-viewport {
 
 .ui-btn-icon-notext .ui-btn-inner .ui-icon {
 
-	margin: -3px -1px 2px;	
+	margin: 4px 2px 2px;	
 	float:left;
 	
 }

@@ -218,16 +218,8 @@ $(document).ready(function() {
      		$('#blogContent div.scrollable').append('<div id="blankSpaceBlog"></div>');				
      		
      }
-	
-	$("#bottomSectionB").click(function(e){
-		
-		e.stopImmediatePropagation();
-	    e.preventDefault();
-	    $.mobile.changePage("#lineUp");
-		setTimeout(speakersRequest, 500);
-		
-
-	});
+     
+    
 	
 	$(".tab0").click(function(e){
 		
@@ -241,70 +233,41 @@ $(document).ready(function() {
 	
 	$(".tab1").click(function(e){
 		
-		e.stopImmediatePropagation();
-	    e.preventDefault();
-	    $.mobile.changePage("#page2");
-	    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		
+		
 	});
 
 	$(".tab2").click(function(e){
 		
 		e.stopImmediatePropagation();
 	    e.preventDefault();
-	    $.mobile.changePage("#page3");
+	    $.mobile.changePage("#Vimeo");
 	    setTimeout(vimeoRequest, 500);
 
 	});
 	
 	$(".tab3").click(function(e){
 		
-		setTimeout(handleBlog, 500);
+		//link to internal photos page
+
+	});
+	
+	$(".tab4").click(function(e){
+		
 		e.stopImmediatePropagation();
 	    e.preventDefault();
-	    $.mobile.changePage("#page4");
+	    $.mobile.changePage("#page2");
+	    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		
 
 	});
 	
-	$(".tabOver").mouseover(function(){
+	$(".tab5").click(function(e){
 		
-		var currentId = $(this).attr('id');
-		//alert(currentId);
-		//alert(tab0);
-		var tabObj = eval("(" + currentId + ")");
-		$(tabObj).css('background-color', '#ff6600');
-		$(tabObj).children().css('color', 'white');
+		//external link to facebook
+		
 	});
 	
-	$(".tabOver").mouseout(function(){
-		
-		var currentId = $(this).attr('id');
-		//alert(currentId);
-		//alert(tab0);
-		var tabObj = eval("(" + currentId + ")");
-		
-		if(tabObj == tab0){
-			
-			$(tabObj).css('background-color', '#212121');
-			
-		}
-		if(tabObj == tab1){
-			
-			$(tabObj).css('background-color', '#2c2c2c');
-			
-		}
-		if(tabObj == tab2){
-			
-			$(tabObj).css('background-color', '#393939');
-			
-		}
-		if(tabObj == tab3){
-			
-			$(tabObj).css('background-color', '#454444');
-			
-		}
-			$(tabObj).children().css('color', '#999999');
-	});
-
 //init application
 
 setTimeout(modesRequest, 100);

@@ -22,10 +22,11 @@
              $.mobile.defaultPageTransition = "slide";
              $.mobile.phonegapNavigationEnabled = true
              $.mobile.pushStateEnabled = false;
-             $.mobile.loader.prototype.options.text = "loading";
+             
+             /*$.mobile.loader.prototype.options.text = "loading";
 			 $.mobile.loader.prototype.options.textVisible = false;
 			 $.mobile.loader.prototype.options.theme = "a";
-			 $.mobile.loader.prototype.options.html = "";
+			 $.mobile.loader.prototype.options.html = "";*/
 			 
         });
   		
@@ -34,7 +35,7 @@
    <script type='application/javascript' src='assets/js/fastclick.js'></script>
    <script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>
    
-   <script>
+   <!--<script>
    
     $(document).on( "click", ".show-page-loading-msg", function() {
       var $this = $( this ),
@@ -55,7 +56,7 @@
       $.mobile.loading( "hide" );
     });
     
-  </script>
+  </script>-->
    
    <!--<script>
 		$( document ).on( "pageinit", "#homePage", function() {
@@ -103,13 +104,14 @@
 	  	<div data-role="panel" id="left-panel" data-theme="b">
 	  		<div id="blankList"></div>
 	    	<ul data-role="listview" data-theme="b">
-	    	<li><a href="#homePage" data-transition="slide">Home</a></li>
-	    	<li id="tab0" class="tab0" data-transition="slide"><a>Upcoming Events</a></li>
-	        <li id="tab1" class="tab1" data-transition="slide"><a>Twitter</a></li>
-	        <li id="tab2" class="tab2" data-transition="slide"><a>Vimeo</a></li>
-	        <li id="tab3" class="tab3" data-transition="slide"><a>Buy Tickets</a></li>
+	    	<li><a href="#homePage" >Home</a></li>
+	    	<li id="tab0" class="tab0" ><a>Upcoming Events</a></li>
+	        <li id="tab1" class="tab1" ><a>Blog</a></li>
+	        <li id="tab2" class="tab2" ><a>Vimeo</a></li>
+	        <li id="tab3" class="tab3" ><a>Photos</a></li>
+	        <li id="tab4" class="tab4" ><a>Twitter</a></li>
+	        <li id="tab5" class="tab5" ><a>Facebook</a></li>
 	        
-            
 	        </ul>
 
 	    </div><!-- /panel -->
@@ -121,7 +123,7 @@
 	<div data-role="page" id="events">
 	
 		<div data-role="header" data-theme="b">
-        	<h1>Glug</h1>
+        	<div id="navImage"></div>
         	<a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
         </div><!-- /header -->
 	
@@ -139,10 +141,12 @@
 			<div id="blankList"></div>
 	    	<ul data-role="listview" data-theme="b">
 	    	<li><a href="#homePage">Home</a></li>
-	    	<li id="tab0" class="tab0" data-transition="slide"><a>Upcoming Events</a></li>
-	        <li id="tab1" class="tab1" data-transition="slide"><a>Twitter</a></li>
-	        <li id="tab2" class="tab2" data-transition="slide"><a>Vimeo</a></li>
-	        <li id="tab3" class="tab3" data-transition="slide"><a>Buy Tickets</a></li>
+	    	<li id="tab0" class="tab0" ><a>Upcoming Events</a></li>
+	        <li id="tab1" class="tab1" ><a>Blog</a></li>
+	        <li id="tab2" class="tab2" ><a>Vimeo</a></li>
+	        <li id="tab3" class="tab3" ><a>Photos</a></li>
+	        <li id="tab4" class="tab4" ><a>Twitter</a></li>
+	        <li id="tab5" class="tab5" ><a>Facebook</a></li>
 	        </ul>
 
 	    </div><!-- /panel -->
@@ -153,7 +157,7 @@
 		<div data-role="page" id="lineUp">
 	
 		<div data-role="header" data-theme="b">
-        	<h1>Glug</h1>
+        	<div id="navImage"></div>
         	<a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
         </div><!-- /header -->
 	
@@ -172,10 +176,12 @@
 	  		<div id="blankList"></div>
 	    	<ul data-role="listview" data-theme="b">
 	    	<li><a href="#homePage">Home</a></li>
-	    	<li id="tab0" class="tab0" data-transition="slide"><a>Upcoming Events</a></li>
-	        <li id="tab1" class="tab1" data-transition="slide"><a>Twitter</a></li>
-	        <li id="tab2" class="tab2" data-transition="slide"><a>Vimeo</a></li>
-	        <li id="tab3" class="tab3" data-transition="slide"><a>Buy Tickets</a></li>
+	    	<li id="tab0" class="tab0" ><a>Upcoming Events</a></li>
+	        <li id="tab1" class="tab1" ><a>Blog</a></li>
+	        <li id="tab2" class="tab2" ><a>Vimeo</a></li>
+	        <li id="tab3" class="tab3" ><a>Photos</a></li>
+	        <li id="tab4" class="tab4" ><a>Twitter</a></li>
+	        <li id="tab5" class="tab5" ><a>Facebook</a></li>
 	        </ul>
 
 	    </div><!-- /panel -->
@@ -183,10 +189,10 @@
 	
 	<!-- Blog Content -->
 	
-	<div data-role="page" id="page1">
+	<div data-role="page" id="Vimeo">
 	
 		<div data-role="header" data-theme="b">
-        	<h1>Glug</h1>
+        	<div id="navImage"></div>
         	<a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
 		</div><!-- /header -->
 	
@@ -200,10 +206,12 @@
 	  		<div id="blankList"></div>
 	    	<ul data-role="listview" data-theme="b">
 	    	<li><a href="#homePage">Home</a></li>
-	    	<li id="tab0" class="tab0" data-transition="slide"><a>Upcoming Events</a></li>
-	        <li id="tab1" class="tab1" data-transition="slide"><a>Twitter</a></li>
-	        <li id="tab2" class="tab2" data-transition="slide"><a>Vimeo</a></li>
-	        <li id="tab3" class="tab3" data-transition="slide"><a>Buy Tickets</a></li>
+	    	<li id="tab0" class="tab0" ><a>Upcoming Events</a></li>
+	        <li id="tab1" class="tab1" ><a>Blog</a></li>
+	        <li id="tab2" class="tab2" ><a>Vimeo</a></li>
+	        <li id="tab3" class="tab3" ><a>Photos</a></li>
+	        <li id="tab4" class="tab4" ><a>Twitter</a></li>
+	        <li id="tab5" class="tab5" ><a>Facebook</a></li>
 	        </ul>
 
 	    </div><!-- /panel -->
@@ -214,7 +222,7 @@
 	<div data-role="page" id="page2">
 	
 		<div data-role="header" data-theme="b">
-        	<h1>Glug</h1>
+        	<div id="navImage"></div>
         	<a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
 		</div><!-- /header -->
 	
@@ -231,10 +239,12 @@
 	  		<div id="blankList"></div>
 	    	<ul data-role="listview" data-theme="b">
 	    	<li><a href="#homePage">Home</a></li>
-	    	<li id="tab0" class="tab0" data-transition="slide"><a>Upcoming Events</a></li>
-	        <li id="tab1" class="tab1" data-transition="slide"><a>Twitter</a></li>
-	        <li id="tab2" class="tab2" data-transition="slide"><a>Vimeo</a></li>
-	        <li id="tab3" class="tab3" data-transition="slide"><a>Buy Tickets</a></li>
+	    	<li id="tab0" class="tab0" ><a>Upcoming Events</a></li>
+	        <li id="tab1" class="tab1" ><a>Blog</a></li>
+	        <li id="tab2" class="tab2" ><a>Vimeo</a></li>
+	        <li id="tab3" class="tab3" ><a>Photos</a></li>
+	        <li id="tab4" class="tab4" ><a>Twitter</a></li>
+	        <li id="tab5" class="tab5" ><a>Facebook</a></li>
 	        </ul>
 
 	    </div><!-- /panel -->
@@ -245,7 +255,7 @@
 	<div data-role="page" id="page3">
 	
 		<div data-role="header" data-theme="b">
-        	<h1>Glug</h1>
+        	<div id="navImage"></div>
         	<a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
 		</div><!-- /header -->
 	
@@ -264,10 +274,12 @@
 	  		<div id="blankList"></div>
 	    	<ul data-role="listview" data-theme="b">
 	    	<li><a href="#homePage">Home</a></li>
-	    	<li id="tab0" class="tab0" data-transition="slide"><a>Upcoming Events</a></li>
-	        <li id="tab1" class="tab1" data-transition="slide"><a>Twitter</a></li>
-	        <li id="tab2" class="tab2" data-transition="slide"><a>Vimeo</a></li>
-	        <li id="tab3" class="tab3" data-transition="slide"><a>Buy Tickets</a></li>
+	    	<li id="tab0" class="tab0" ><a>Upcoming Events</a></li>
+	        <li id="tab1" class="tab1" ><a>Blog</a></li>
+	        <li id="tab2" class="tab2" ><a>Vimeo</a></li>
+	        <li id="tab3" class="tab3" ><a>Photos</a></li>
+	        <li id="tab4" class="tab4" ><a>Twitter</a></li>
+	        <li id="tab5" class="tab5" ><a>Facebook</a></li>
 	        </ul>
 
 	    </div><!-- /panel -->
@@ -278,7 +290,7 @@
 	<div data-role="page" id="page4">
 	
 		<div data-role="header" data-theme="b">
-        	<h1>Glug</h1>
+        	<div id="navImage"></div>
         	<a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
 		</div><!-- /header -->
 	
@@ -297,10 +309,12 @@
 	  		<div id="blankList"></div>
 	    	<ul data-role="listview" data-theme="b">
 	    	<li><a href="#homePage">Home</a></li>
-	    	<li id="tab0" class="tab0" data-transition="slide"><a>Upcoming Events</a></li>
-	        <li id="tab1" class="tab1" data-transition="slide"><a>Twitter</a></li>
-	        <li id="tab2" class="tab2" data-transition="slide"><a>Vimeo</a></li>
-	        <li id="tab3" class="tab3" data-transition="slide"><a>Buy Tickets</a></li>
+	    	<li id="tab0" class="tab0" ><a>Upcoming Events</a></li>
+	        <li id="tab1" class="tab1" ><a>Blog</a></li>
+	        <li id="tab2" class="tab2" ><a>Vimeo</a></li>
+	        <li id="tab3" class="tab3" ><a>Photos</a></li>
+	        <li id="tab4" class="tab4" ><a>Twitter</a></li>
+	        <li id="tab5" class="tab5" ><a>Facebook</a></li>
 	        </ul>
 
 	    </div><!-- /panel -->
