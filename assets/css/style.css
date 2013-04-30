@@ -24,7 +24,7 @@ p{
 	
 }
 
-#homePage{
+#homePage, #events, #Twitter, #Vimeo{
 	
 	background-color:#000000;
 	height:100%;
@@ -50,7 +50,7 @@ p{
 	
 	background-color: #eeeeee;
     height: 100%;
-    position: fixed;
+    position: absolute;
     width: 100%;
     overflow:hidden;
 }
@@ -177,17 +177,6 @@ section{
 	height:100%;
 	background-image:none;
 
-}
-
-#blog p, #page1 p, #page2 p, #page3 p, #page4 p{
-	
-	font-family: helvetica;
-	font-size:2em;
-	margin-left: -35px;
-    left:50%;
-    top:30%;
-    position:absolute;
-	
 }
 
 #blogOption, #twitterOption, #videoOption, #buyOption{
